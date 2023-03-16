@@ -36,7 +36,7 @@ int main(){
 
     if(tam <= 0){
         do{
-            printf("Quantidade inválida, digide novamente:\n");
+            printf("Quantidade invÃ¡lida, digide novamente:\n");
             scanf("%d", &tam);
         }while(tam <= 0);
     }
@@ -44,7 +44,7 @@ int main(){
     float *notas;
     notas = (float *) malloc (tam * sizeof(float));
     if (notas == NULL){
-        printf("Erro: não foi possível alocar memória");
+        printf("Erro: nÃ£o foi possÃ­vel alocar memÃ³ria");
         return -1;
     }
     else{
@@ -57,10 +57,9 @@ int main(){
         float media, desvio;
         mediaDesvio(notas, tam, &media, &desvio);
         printf("Media da turma: %.2f\n", media);
-        printf("Desvio padrão: %f\n", desvio);
-
+        printf("Desvio padrÃ£o: %f\n", desvio);
+        free(notas);
+        
+        return 0;
     }
-
-    return 0;
-
 }
