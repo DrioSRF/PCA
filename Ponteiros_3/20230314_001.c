@@ -12,7 +12,7 @@ void imprime(float *init, float *end){
 
 void mediaDesvio(float *vetor, int tam, float *media, float *desvio){
 
-    int soma = 0;
+    float soma = 0.0;
     float soma_desvio = 0;
 
     for (float *pvet = vetor; pvet <= vetor+(tam-1); pvet++){soma += *pvet;}
